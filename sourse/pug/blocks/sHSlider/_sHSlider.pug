@@ -1,0 +1,78 @@
+mixin sHSlider(data)
+	// start sHSlider
+	+b.sHSlider.section#sHSlider&attributes(attributes)
+		+e.container.container
+			+e.row.row.justify-content-lg-between
+				+sHSliderItem(1)
+					| Оперативность
+					|
+					br.d-none.d-sm-block
+					| обработки
+				+sHSliderItem(2)
+					| Высокая
+					|
+					br.d-none.d-sm-block
+					| квалификация
+				+sHSliderItem(3)
+					| Современное
+					|
+					br.d-none.d-sm-block
+					| оборудование
+				+sHSliderItem(4)
+					| Широкий
+					|
+					br.d-none.d-sm-block
+					| спектр услуг
+				+sHSliderItem(5)
+					| Отсутствие
+					|
+					br.d-none.d-sm-block
+					| шаблонности
+			+e.slider
+				.swiper-container.h-slider-js
+					.swiper-wrapper
+						+sHSlide(1, 'Новое')
+							| Внедрение Искуственного интеллекта в бизнес процессы
+						+sHSlide(2, 'Акция')
+							| Скидка 5%
+							br
+							| на все услуги
+						+sHSlide(2, 'Акция')
+							| Скидка 5%
+							br
+							| на все услуги
+						+sHSlide(2, 'Акция')
+							| Скидка 5%
+							br
+							| на все услуги
+						+sHSlide(2, 'Акция')
+							| Скидка 5%
+							br
+							| на все услуги
+				+b.h-sl-prev--js
+					+icon('arrow-left', 'd-none d-sm-block')
+					+icon('arrow-l-sm', 'd-sm-none')
+				+b.h-sl-next--js
+					+icon('arrow-right', 'd-none d-sm-block')
+					+icon('arrow-r-sm', 'd-sm-none')
+	// end sHSlider
+
+mixin sHSliderItem(imgNum)
+	+e.col.col-sm-4.col-lg-auto
+		+e.square
+			img(loading="lazy" src=`img/svg/h-sl-item-${imgNum}.svg` alt="")
+		+e.txt
+			block
+
+mixin sHSlide(imgNum, redLine)
+	.swiper-slide
+		+e.slide-inner(href='#')
+			img.swiper-lazy(src="#" data-src=`img/@2x/h-slide-${imgNum}.jpg` alt="")
+			+e.content
+				if redLine
+					+e.red-pills
+						+e.red-pill=redLine
+				+e.txt-bl
+					+e.H5.title
+						block
+					+e.descr При заказе на сайте

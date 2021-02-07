@@ -1,0 +1,31 @@
+mixin sTeam(data)
+	// start sTeam
+	+b.SECTION.sTeam.section#sTeam&attributes(attributes)
+		+e.bg
+			img(loading="lazy" src="img/svg/sService-bg-white.svg" alt="")
+		+e.container.container
+			+b.section-title
+				h2 Команда
+			+e.slider
+				.swiper-container.team-slider-js
+					.swiper-wrapper
+						+teamSlide(1)
+						+teamSlide(2)
+						+teamSlide(3)
+						+teamSlide(4)
+						+teamSlide(1)
+				+b.team-prev--js
+					+icon('arrow-left', 'd-none d-sm-block')
+					+icon('arrow-l-sm', 'd-sm-none')
+				+b.team-next--js
+					+icon('arrow-right', 'd-none d-sm-block')
+					+icon('arrow-r-sm', 'd-sm-none')
+			+b.team-pugin--js
+	// end sTeam
+
+mixin teamSlide(imgNum)
+	.swiper-slide
+		+e.img
+			img(loading="lazy" src=`img/@2x/team-slide-${imgNum}.jpg` alt="")
+		+e.name Имя фамиля
+		+e.prof Должность

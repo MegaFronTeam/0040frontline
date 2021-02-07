@@ -1,10 +1,17 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
+		+e.bg
+			img(loading="lazy" src="img/@2x/headbl-bg.jpg")
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+			+b.section-title
+				h1
+					| Профессиональный
+					br
+					| контакт-центр
+					br
+					| с искусственным
+					br
+					| интеллектом
+			+e.btn(href="#") Рассчитать стоимость
 	// end headerBlock

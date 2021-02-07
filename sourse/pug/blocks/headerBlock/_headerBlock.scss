@@ -1,55 +1,90 @@
 // start .headerBlock
 .headerBlock {
-	margin-bottom: 1px;
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
-	// background-image: url(../img);
-	// background-color: #000000;
-
-	h1 {
-		margin-bottom: 1px;
+	--sPT: 33px;
+	--sPB: 53px;
+	--sTPB: 39px;
+	@include media-breakpoint-up(sm){
+		--sPT: #{rem(50)};
+		--sPB: #{rem(70)};
+		--sTPB: #{rem(37)};
+	}
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(67)};
+		--sPB: #{rem(124)};
+		--sTPB: #{rem(52)};
 	}
 
-	h2 {
-		margin-bottom: 1px;
+
+	.container{
+		@include media-breakpoint-down(sm){
+			padding: 0 10px;
+		}
 	}
 
-	@include media-breakpoint-up(xl) {}
+	position: relative;
+	z-index: 1;
+	&__bg{
+		clip-path: polygon(100% 0,100% 98%,38% 96%,0 100%,0 0);
+		@include media-breakpoint-up(sm){
+			clip-path: polygon(0 0,75% 2%,100% 0,100% 100%,25% 96%,0 100%);
+		}
+		@include media-breakpoint-up(xl){
+			clip-path: polygon(0 0,75% 2%,100% 0,100% 100%,25% 92%,0 100%);
+		}
 
-	@include media-breakpoint-up(lg) {}
-
-	@include media-breakpoint-up(md) {}
-
-	@include media-breakpoint-up(sm) {}
-
-	@include media-breakpoint-up(xs) {}
-
-	//
-	@include media-breakpoint-between(md, xl) {}
+		background: $gray-110;
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 
 
-	//
-	@include media-breakpoint-only(xs) {}
+		@include media-breakpoint-down(sm){
+			padding-top: 48px;
+		}
+		@include media-breakpoint-up(xxl){
+			text-align: right;
+			padding-right: 140px;
+		}
 
-	@include media-breakpoint-only(sm) {}
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			@include media-breakpoint-up(xxl){
+				height: 100%;
+				width: auto;
+				object-fit: contain;
+				//object-position: 176px 0px;
+			}
+		}
+	}
+	.section-title{
+		h1{
+			@include media-breakpoint-down(sm){
+				font-size: 26px;
+			}
 
-	@include media-breakpoint-only(md) {}
+		}
+	}
+	&__btn{
+		@extend .default-btn;
+		font-size: 16px;
+		line-height: (20/16);
 
-	@include media-breakpoint-only(lg) {}
+		padding: 20.5px 28px;
+		@include media-breakpoint-up(sm){
+			padding: 27px 57px;
+		}
 
-	@include media-breakpoint-only(xl) {}
-
-	//
-	@include media-breakpoint-down(xl) {}
-
-	@include media-breakpoint-down(lg) {}
-
-	@include media-breakpoint-down(md) {}
-
-	@include media-breakpoint-down(sm) {}
-
-	@include media-breakpoint-down(xs) {}
-
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
 }
 
 // end.headerBlock

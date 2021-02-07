@@ -3,6 +3,10 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sHSlider/_sHSlider.pug
+include ../blocks/sService/_sService.pug
+include ../blocks/sFeedback/_sFeedback.pug
+include ../blocks/sTeam/_sTeam.pug
 
 block variables
 	- let  mainPage= null
@@ -10,17 +14,15 @@ block title
 	- let  title= 'title'
 	title= title
 block pagecontent
-
-	+mob-mnu()
+	//-+mob-mnu()
 	+header()
-	+top-nav()
-	+in-c("checkbox", "text")
-
-	+topLine() 
+		+top-nav()
 	+headerBlock()
+	+sHSlider()
+	+sService()
+	+sFeedback()
+	+sTeam()
+
 	+sForm()
 	+sContact()
 	+footer()
-
-
-	

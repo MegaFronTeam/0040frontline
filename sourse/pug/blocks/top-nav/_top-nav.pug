@@ -1,30 +1,44 @@
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-		
 			+mnu()
 			.text-right
 	//  мобильное меню
+
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
-			.row
-				.col-auto.d-lg-none
-					+b.toggle-menu-mobile--js
-						span
-				.col
-					+mnu()
-					
+		+e.container.container
+			+e.dt-menu.d-lg-block.d-none
+				+mnu()
+			+e.ll-cont
+				+e.logo-line
+					+e.contact
+						img(loading="lazy" src="img/svg/contact-word.svg" alt="")
+					+e.logo(href='/')
+						img(loading="lazy" src="img/svg/logo.svg" alt="")
+					+e.center
+						img(loading="lazy" src="img/svg/center-word.svg" alt="")
+						img.d-none.d-lg-block(loading="lazy" src="img/svg/go-contact-txt.svg" alt="")
+			+e.bot-row.row
+				+e.all-col.col-auto.col-lg
+					+e.all-btn
+						+e.all-burg.d-none.d-lg-flex
+							+icon('burger-all')
+						+e.all-txt Все услуги
+				+e.tell-col.col-auto.text-sm-end
+					+e.tell(href='tel:+74957893859') +7 495 789 38 59
+					+e.order-call(href='#') Заказать звонок
+				.col-auto.d-none.d-lg-block
+					+e.search
+						+input('Поиск', 'text')
+						+e.BUTTON.search-btn(type="submit")
+							+icon('zoom')
+				.col-auto.d-none.d-md-block
+					+e.calc-btn(href='#') Рассчитать стоимость
+				.col.d-lg-none.order-last
+					+e.mob-burger.ms-auto
+						+icon('burger-all')
 	// end top-nav

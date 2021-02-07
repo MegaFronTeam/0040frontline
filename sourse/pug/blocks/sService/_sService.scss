@@ -1,0 +1,172 @@
+// start .sService
+.sService {
+	--sPT: 44px;
+	--sPB: 55px;
+	--sTPB: 34px;
+	@include media-breakpoint-up(sm){
+		--sPT: #{rem(50)};
+		--sPB: #{rem(70)};
+		--sTPB: #{rem(37)};
+	}
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(80)};
+		--sPB: #{rem(151)};
+		--sTPB: #{rem(52)};
+	}
+
+	&__container{
+		@include media-breakpoint-down(sm){
+			padding: 0 7.5px 0 8.5px;
+		}
+
+		@include media-breakpoint-up(xxl){
+			padding-right: 40px;
+		}
+	}
+
+	position: relative;
+	z-index: 1;
+	&__bg{
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		&:before{
+			content: '';
+			position: absolute;
+			z-index: -2;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: $gray-110;
+		}
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		clip-path: polygon(100% 1%,100% 98.7%,11% 98%,0 98%,0 0);
+		@include media-breakpoint-up(sm){
+			clip-path: polygon(0 0,81% 3%,100% 0,100% 100%,20% 97%,0 100%);
+		}
+		@include media-breakpoint-up(xl){
+			clip-path: polygon(0 0,81% 6%,100% 0,100% 100%,20% 94%,0 100%);
+		}
+	}
+
+	.section-title{
+		h2{
+			@include media-breakpoint-down(sm){
+				font-size: 26px;
+			}
+
+			text-transform: uppercase;
+		}
+	}
+
+	&__row{
+		@include media-breakpoint-up(sm){
+			@include roww(30px);
+
+			margin-bottom: -30px;
+		}
+		@include media-breakpoint-up(xxl){
+			@include roww(70px);
+
+			margin-bottom: rem(-58);
+		}
+	}
+	&__item{
+		position: relative;
+		z-index: 1;
+
+		margin-bottom: rem(40);
+		padding: 36px 20px 22px 21px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(30);
+			padding: rem(50) rem(20) rem(30);
+		}
+		@include media-breakpoint-up(xxl){
+			margin-bottom: rem(55);
+			padding: 52px 20px 27px 21px;
+		}
+
+		border: 3px solid $danger;
+		border-image: linear-gradient(54.42deg, #FF8034 -0.47%, #FF394D 88.37%);
+		border-image-slice: 1;
+
+		&.lower-item{
+			@include media-breakpoint-up(md){
+				min-height: rem(350);
+			}
+			@include media-breakpoint-up(xxl){
+				padding-top: 68px;
+			}
+		}
+		&.top-item{
+			@include media-breakpoint-up(md){
+				min-height: rem(320);
+			}
+			@include media-breakpoint-up(xxl){
+				min-height: rem(290);
+			}
+		}
+	}
+	&__title{
+		position: absolute;
+		top: 0;
+
+		left: 10px;
+		padding: 0 35px 0 10px;
+		@include media-breakpoint-up(sm){
+			left: rem(10px);
+			padding: 0 rem(25) 0 rem(10);
+		}
+		@include media-breakpoint-up(xxl){
+			left: rem(12px);
+		}
+		transform: translateY(-17px);
+
+		background-color: $gray-110;
+
+
+		text-transform: uppercase;
+		color: $danger;
+	}
+	&__links{
+		a{
+			display: block;
+
+			line-height: (16/13);
+			margin-bottom: 12px;
+			@include media-breakpoint-up(sm){
+				font-size: rem(15);
+				line-height: (18/15);
+				margin-bottom: rem(20);
+			}
+
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+
+			font-feature-settings: 'case' on;
+
+			color: $body-color;
+			&:hover{
+				color: $primary;
+			}
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+} // end.sService
