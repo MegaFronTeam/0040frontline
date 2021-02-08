@@ -1,10 +1,9 @@
 mixin mob-mnu()
 	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js
-			span
 		+e.inner
+			+e.close-btn(class="toggle-menu-mobile--js")
+				+icon('cross')
 			+mnu()
-			.text-right
 	//  мобильное меню
 
 mixin top-nav() 
@@ -39,6 +38,6 @@ mixin top-nav()
 				.col-auto.d-none.d-md-block
 					+e.calc-btn(href='#') Рассчитать стоимость
 				.col.d-lg-none.order-last
-					+e.mob-burger.ms-auto
+					+e.mob-burger.ms-auto(class="toggle-menu-mobile--js")
 						+icon('burger-all')
 	// end top-nav

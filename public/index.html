@@ -11,6 +11,32 @@
 	</head>
 	<body> 
 		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js d-lg-none">
+				<div class="menu-mobile__inner">
+					<div class="menu-mobile__close-btn toggle-menu-mobile toggle-menu-mobile--js">
+						<svg class="icon icon-cross ">
+							<use xlink:href="img/svg/sprite.svg#cross"></use>
+						</svg>
+					</div>
+					<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Главная</a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О компании</a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Команда</a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Клиенты и отзывы</a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Пресс-центр</a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Вакансии</a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--  мобильное меню-->
 			<!-- start header-->
 			<header class="header" id="header">
 				<!-- start top-nav-->
@@ -71,7 +97,7 @@
 							<div class="col-auto d-none d-md-block"><a class="top-nav__calc-btn" href="#">Рассчитать стоимость</a>
 							</div>
 							<div class="col d-lg-none order-last">
-								<div class="top-nav__mob-burger ms-auto">
+								<div class="top-nav__mob-burger ms-auto toggle-menu-mobile toggle-menu-mobile--js">
 									<svg class="icon icon-burger-all ">
 										<use xlink:href="img/svg/sprite.svg#burger-all"></use>
 									</svg>
