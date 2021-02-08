@@ -22,6 +22,7 @@ $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-450: #C4C4C4;
 $gray-500: #A8A8A8 !default;
+$gray-550: #808080;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
@@ -643,8 +644,8 @@ $form-label-font-style: null !default;
 $form-label-font-weight: null !default;
 $form-label-color: null !default;
 
-$input-padding-y: $input-btn-padding-y !default;
-$input-padding-x: $input-btn-padding-x !default;
+$input-padding-y: rem(22.5) !default;
+$input-padding-x: rem(18) !default;
 $input-font-family: $input-btn-font-family !default;
 $input-font-size: $input-btn-font-size !default;
 $input-font-weight: $font-weight-base !default;
@@ -667,7 +668,7 @@ $input-border-color: $gray-400 !default;
 $input-border-width: 0 !default;
 $input-box-shadow: $box-shadow-inset !default;
 
-$input-border-radius: rem(7) !default;
+$input-border-radius: rem(100) !default;
 $input-border-radius-sm: $border-radius-sm !default;
 $input-border-radius-lg: $border-radius-lg !default;
 
@@ -774,7 +775,7 @@ $form-select-feedback-icon-size: $input-height-inner-half $input-height-inner-ha
 
 $form-select-border-width: $input-border-width !default;
 $form-select-border-color: $input-border-color !default;
-$form-select-border-radius: $border-radius !default;
+$form-select-border-radius: rem(100) !default;
 $form-select-box-shadow: $box-shadow-inset !default;
 
 $form-select-focus-border-color: $input-focus-border-color !default;

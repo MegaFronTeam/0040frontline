@@ -310,6 +310,7 @@
 
     font-size: 10px;
     line-height: 1.2;
+    border-radius: rem(7);
   }
   &__search-btn{
     @extend .btn;

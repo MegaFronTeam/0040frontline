@@ -1,29 +1,197 @@
+// start .sForm
+.sForm {
+  overflow: hidden;
+  color: $white;
 
-	// start .sForm
-	.sForm {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+  --sPT: 41px;
+  --sTPB: 20px;
+  --sPB: 70px;
+  @include media-breakpoint-up(sm){
+    --sPT: #{rem(90)};
+    --sTPB: #{rem(40)};
+    --sPB: #{rem(90)};
+  }
+  @include media-breakpoint-up(lg){
+    --sPT: #{rem(90)};
+    --sTPB: #{rem(40)};
+    --sPB: 0;
+  }
+  @include media-breakpoint-up(xxl){
+    --sPT: 95px;
+    --sTPB: 50px;
+    --sPB: 0;
+  }
 
+  position: relative;
+  z-index: 1;
+  &__bg{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &:before{
+      content: '';
+      position: absolute;
+      z-index: -2;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #FF4444 -0.81%, #FF8731 100%);
+    }
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    //clip-path: polygon(79% 4%,100% 0,100% 100%,0 100%,0 0);
+    @include media-breakpoint-up(sm){
+      clip-path: polygon(79% 4%,100% 0,100% 100%,0 100%,0 0);
+    }
+    @include media-breakpoint-up(xxl){
+      clip-path: polygon(79% 11%,100% 0,100% 100%,0 100%,0 0);
+    }
+  }
+
+  &__container{
+
+  }
+  &__row{
+    //flex-wrap: nowrap;
+  }
+  &__form-col{
+
+    @include media-breakpoint-up(lg){
+      max-width: rem(670);
+      padding: rem(40) 0 0 rem(10);
+    }
+    @include media-breakpoint-up(xl){
+      max-width: rem(700);
+    }
+    @include media-breakpoint-up(xxl){
+      padding: 48px 0 0 10px;
+    }
+  }
+  .section-title{
+    width: 80%;
+    min-width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+    @include media-breakpoint-up(md){
+      width: 100%;
+    }
+
+    h2{
+      font-size: 20px;
+      margin-bottom: 9px;
+      @include media-breakpoint-up(sm){
+        font-size: rem(38);
+        margin-bottom: rem(25);
+      }
+
+    }
+    p{
+      line-height: 1.65;
+
+      font-size: 13px;
+      padding: 0 8px;
+      @include media-breakpoint-up(sm){
+        font-size: rem(20);
+        padding: 0;
+      }
+    }
+  }
+  .form-wrap{
+    &__row{
+      @include roww(8px);
+
+      & > *{
+        margin-bottom: 8px;
+
+        @include media-breakpoint-down(md){
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+    &__select-col{
+
+      select{
+        font-size: 13px;
+        line-height: (16/13);
+
+        padding: rem(22.5) 45px rem(22.5) 20px;
+
+        width: 220px;
+        @include media-breakpoint-up(md){
+          width: rem(220);
+        }
+      }
+
+    }
+    &__input-wrap{
+      width: 220px;
+      @include media-breakpoint-up(md){
+        width: rem(220);
+      }
+    }
+    &__input{
+      width: 100%;
+      font-size: 13px;
+      line-height: (16/13);
+
+      padding-left: 20px;
+
+      @include placeholder(){
+        color: $black!important;
+      }
+    }
+    //btn
+    &__btn{
+      @extend .default-btn;
+
+      min-width: 220px;
+      @include media-breakpoint-up(md){
+        min-width: rem(199);
+      }
+
+      padding: rem(19.5) rem(25);
+      border: 3px solid $white!important;
+    }
+    &__{}
+  }
+  //
+  &__man-col{
+    @include media-breakpoint-up(xl){
+      padding-left: rem(55);
+    }
+    @include media-breakpoint-up(xxl){
+      padding-left: 85px;
+    }
+  }
+  &__man{
+    width: rem(300);
+    margin-bottom: rem(-100);
+    @include media-breakpoint-up(xl){
+      width: 310px;
+      margin-bottom: -108px;
+    }
+
+    img{
+      width: auto;
+      height: auto;
+
+      max-width: 100%;
+    }
+  }
+  &__{}
+  &__{}
+  &__{}
+  &__{}
+  &__{}
 } // end.sForm

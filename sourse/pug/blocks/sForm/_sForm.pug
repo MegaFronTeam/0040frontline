@@ -1,9 +1,27 @@
 mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+		+e.bg
+			img(loading="lazy" src="img/svg/sForm-bg.svg" alt="")
+		+e.container.container
+			+e.row.row
+				+e.form-col.col-12.col-lg-auto
+					+b.section-title.text-center.text-md-start
+						h2 Отправьте заявку и получите скидку 5% на все услуги
+						p Выберите услуги и введите телефон — мы перезвоним вам
+					+form-wrap
+						+e.row.row
+							+e.select-col.col-12.col-md-auto
+								select.form-control.form-select
+									option(value="" disabled selected class="d-none") Выберите услуги
+									option услуга 1
+									option услуга 2
+									option услуга 3
+							.col-12.col-md-auto
+								+input('Введите телефон', 'tel')
+							.col-12.col-md-auto
+								+e.BUTTON.btn(type='button') Отправить заявку
+				+e.man-col.col-auto.d-none.d-lg-block
+					+e.man
+						img(loading="lazy" src="img/@2x/man-img.png" alt="")
 	// end sForm

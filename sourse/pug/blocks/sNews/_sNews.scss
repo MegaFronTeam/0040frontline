@@ -1,0 +1,145 @@
+// start .sNews
+.sNews {
+	--sPT: 18px;
+	--sTPB: 27px;
+	--sPB: 39px;
+	@include media-breakpoint-up(sm){
+		--sPT: #{rem(40)};
+		--sTPB: #{rem(30)};
+		--sPB: #{rem(40)};
+	}
+	@include media-breakpoint-up(xxl){
+		--sPT: 20px;
+		--sTPB: 55px;
+		--sPB: 54px;
+	}
+
+	&__container{
+		@include media-breakpoint-down(sm){
+			padding: 0 9px;
+		}
+	}
+	.section-title{
+		h2{
+			@include media-breakpoint-down(sm){
+				font-size: 26px;
+			}
+		}
+	}
+	&__row{
+		@include roww(10px);
+
+		& > *{
+			margin-bottom: 14px;
+		}
+
+		margin-bottom: -14px;
+
+		padding-bottom: 16px;
+		@include media-breakpoint-up(sm){
+			@include roww(30px);
+
+			& > *{
+				margin-bottom: rem(30);
+			}
+
+			margin-bottom: -30px;
+
+			padding-bottom: 30px;
+		}
+		@include media-breakpoint-up(xxl){
+			@include roww(40px);
+
+			& > *{
+				margin-bottom: 40px;
+			}
+
+			margin-bottom: -40px;
+
+			padding-bottom: rem(42);
+		}
+	}
+	&__item-row{
+		@include roww(0px);
+		background-color: $gray-110;
+
+		border-radius: 5px;
+		overflow: hidden;
+	}
+	&__i-col{
+
+	}
+	//img
+	&__img{
+		@extend .accept-ratio-frame;
+
+		padding-top: 47%;
+		@include media-breakpoint-between(sm, lg){
+			padding-top: 0;
+			height: 100%;
+		}
+		@include media-breakpoint-up(lg){
+			padding-top: (9/16) * 100%;
+		}
+		@include media-breakpoint-up(xxl){
+			padding-top: (142/360) * 100%;
+		}
+	}
+	&__txt{
+		@include media-breakpoint-between(sm, lg){
+			min-height: 200px;
+		}
+
+		padding: 16px 10px 16px;
+		@include media-breakpoint-up(sm){
+			padding: rem(20);
+		}
+		@include media-breakpoint-up(xxl){
+			padding: 19px 20px 16px;
+		}
+	}
+	&__title{
+		display: block;
+		font-weight: 600;
+		line-height: 1.35;
+
+		font-size: 12px;
+		margin-bottom: 10px;
+		@include media-breakpoint-up(sm){
+			font-size: rem(14);
+			margin-bottom: rem(11);
+		}
+
+		color: $body-color;
+		&:hover{
+			color: $primary;
+		}
+	}
+	&__descr{
+		color: $gray-550;
+
+		font-size: 11px;
+		line-height: (13/11);
+		margin-bottom: 8px;
+		@include media-breakpoint-up(sm){
+			font-size: 12px;
+			line-height: (15/12);
+			margin-bottom: rem(12);
+		}
+	}
+	&__date{
+		font-size: 10px;
+		line-height: 1.45;
+		color: rgba($primary, .5);
+	}
+
+	//btn
+	&__btn{
+		@extend .default-btn;
+
+		padding: 18px 33px;
+	}
+	//
+	&__{}
+	&__{}
+} // end.sNews

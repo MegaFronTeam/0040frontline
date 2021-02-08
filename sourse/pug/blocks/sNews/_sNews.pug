@@ -1,0 +1,29 @@
+mixin sNews(data)
+	// start sNews
+	+b.SECTION.sNews.section#sNews&attributes(attributes)
+		+e.container.container
+			+b.section-title.text-center
+				h2 Новости компании
+			+e.row.row
+				+sNewItem(1)
+				+sNewItem(2)
+				+sNewItem(3)
+			.text-center
+				+e.btn(href='#') Смотреть все новости
+	// end sNews
+
+mixin sNewItem(imgNum)
+	.col-12.col-lg-4
+		+e.item-row.row
+			+e.i-col.col-12.col-sm-6.col-lg-12
+				+e.img(href='#')
+					img(loading="lazy" src=`img/@2x/news-img-${imgNum}.jpg` alt="")
+			+e.i-col.col-12.col-sm-6.col-lg-12
+				+e.txt
+					+e.title(href='#') Lorem ipsum dolor sit amet, consectetur adipiscing elit elementum fermentum
+					+e.descr
+						| Maecenas imperdiet tristique sapien
+						|
+						br.d-sm-none
+						| eget faucibus...
+					+e.date 24.11.2020

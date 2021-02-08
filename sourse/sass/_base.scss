@@ -536,7 +536,7 @@ a{
 		img{
 			// opacity: .8;
 			filter: brightness(80%);
-			transform: scale(1.1);
+			//transform: scale(1.1);
 		}
 	}
 
@@ -599,4 +599,9 @@ a{
 			opacity: .8;
 		}
 	}
+}
+
+//
+.form-select{
+	background-image: url(../img/svg/chevron-down.svg);
 }
