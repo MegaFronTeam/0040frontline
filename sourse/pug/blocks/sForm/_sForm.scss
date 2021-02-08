@@ -5,7 +5,7 @@
 
   --sPT: 41px;
   --sTPB: 20px;
-  --sPB: 70px;
+  --sPB: 57px;
   @include media-breakpoint-up(sm){
     --sPT: #{rem(90)};
     --sTPB: #{rem(40)};

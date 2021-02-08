@@ -1,2 +1,122 @@
 mixin footer()
-	footer.footer
+  +b.FOOTER.footer
+    +e.bg
+      img.d-none.d-sm-block(loading="lazy" src="img/svg/footer-top-bg.svg" alt="")
+      img.d-sm-none(loading="lazy" src="img/svg/footer-bg-sm.svg" alt="")
+    +e.container.container
+      +e.row.row
+        +e.menu-col.col-12.col-lg-auto
+          +mnu2()
+        +e.serv-col.col
+          +e.s-row.row
+            .col-6.col-md-4
+              +sServiceItem([
+                'Для банков и финансового сектора',
+                'Для логистики',
+                'Для населения',
+                'Для госструктур',
+                'Для страховых компаний',
+                'Для ритейла',
+              ])(class="")
+                | Готовые решения
+              //-up sm
+              +sServiceItem([
+                'Номер 8 800',
+                'Аренда рабочего места',
+                'Обработка данных заказчика',
+                'SMS-рассылка',
+                'Консалтинг в области C all-центров',
+                'Почтовая рассылка',
+                'Аренда оператора',
+              ])(class="d-none d-sm-block")
+                | Другие услуги
+              //-down sm
+              +sServiceItem([
+                'Актуализация базы данных',
+                'Информирование клиентов',
+                'Коллекторские услуги',
+                'Конкурентная разведка',
+                'Лидогенерация',
+                'Назначение встреч',
+                'Проведение опросов',
+                'Оценка качества работы',
+                'Повышение лояльности клиентов',
+                'Приглашения на мероприятия',
+                'Телемаркетинг',
+              ])(class="xs-calls-item d-sm-none")
+                | Исходящие звонки
+            .col-6.col-md-4
+              +sServiceItem([
+                'Виртуальный офис и ресепшн',
+                'Клиентский сервис и поддержка',
+                'Горячая линия',
+                'Прием жалоб и предложений',
+                'Прием заказов',
+                'Техническая поддержка',
+              ])(class="")
+                | Входящие звонки
+              //-down sm
+              +sServiceItem([
+                'Номер 8 800',
+                'Аренда рабочего места',
+                'Обработка данных заказчика',
+                'SMS-рассылка',
+                'Консалтинг в области C all-центров',
+                'Почтовая рассылка',
+                'Аренда оператора',
+              ])(class="d-sm-none")
+                | Другие услуги
+              +sServiceItem([
+                'Создание и поддержка чат-ботов',
+                'Голосовой помощник',
+                'Распознавание речи',
+                'База знаний',
+              ])(class="")
+                | Искусственный интеллект
+            .col-6.col-md-4.d-none.d-sm-block
+              +sServiceItem([
+                'Актуализация базы данных',
+                'Информирование клиентов',
+                'Коллекторские услуги',
+                'Конкурентная разведка',
+                'Лидогенерация',
+                'Назначение встреч',
+                'Проведение опросов',
+                'Оценка качества работы',
+                'Повышение лояльности клиентов',
+                'Приглашения на мероприятия',
+                'Телемаркетинг',
+              ])(class="")
+                | Исходящие звонки
+    +b.bot-footer
+      +e.container.container
+        +e.row.row
+          +botFootItem('tel', 'Телефон', 'col-6 col-lg-3 tell-col')
+            +e.tel(href='tel:+74957893859') +7 495 789 38 59
+          +botFootItem('clock', 'Время работы', 'col-sm-6 col-lg-3 shedule-col')
+            +e.txt-str
+              | Коммерческий отдел: 8:00–19:00
+              |
+              br
+              | Колл-центр: 24/7
+          +botFootItem('location', 'Адрес офиса', 'col-sm-6 col-lg-3 loc-col')
+            +e.txt-str
+              | Москва, ул. Новодмитровская,
+              |
+              br
+              | д. 2, к. 6, этаж 8, пом. 82, офис 153М
+          +botFootItem('mail', 'Email', 'col-6 col-lg-3 mail-col')
+            +e.mail(href='mailto:info@frontline-cc.ru') info@frontline-cc.ru
+        +e.lower-row.row
+          .col-12.col-md-6.col-lg-auto
+            +e.copyright Коннект Лайн © 2010–2020
+          .col-12.col-md-6.col-lg-auto
+            +e.policy(href="#") Политика конфиденциальности
+
+mixin botFootItem(icon, name, bootClass='')
+  +e.col(class=bootClass)
+    +e.item
+      +e.icon
+        +icon(icon)
+      +e.name=name
+      block
