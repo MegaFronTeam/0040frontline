@@ -12,20 +12,24 @@ include ../blocks/sAbout/_sAbout.pug
 include ../blocks/sClients/_sClients.pug
 include ../blocks/sAllCountry/_sAllCountry.pug
 include ../blocks/sSertificats/_sSertificats.pug
+include ../blocks/sTeamRow/_sTeamRow.pug
+include ../blocks/sOurPeople/_sOurPeople.pug
+include ../blocks/sFbPills/_sFbPills.pug
+include ../blocks/sFormAlt/_sFormAlt.pug
+include ../blocks/sVacancy/_sVacancy.pug
+include ../blocks/sDescr/_sDescr.pug
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= '01-about'
+	- let  title= '05-vacancy'
 	title= title
 block pagecontent
 	+mob-mnu()
 	+header()
 		+top-nav()
-	+sAbout()
-		+breadcrumb('Главная ', 'О компании')
-	+sClients()
-	+sTeam(true)(class="sTeam--alt")
-	+sAllCountry()
-	+sSertificats()
+	+sVacancy()
+		+breadcrumb('Главная ', 'Вакансии')
+	+sFormAlt2()
+	+sDescr()
 	+footer()

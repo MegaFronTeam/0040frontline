@@ -16,18 +16,19 @@ include ../blocks/sTeamRow/_sTeamRow.pug
 include ../blocks/sOurPeople/_sOurPeople.pug
 include ../blocks/sFbPills/_sFbPills.pug
 include ../blocks/sFormAlt/_sFormAlt.pug
+include ../blocks/sVacancy/_sVacancy.pug
+include ../blocks/sDescr/_sDescr.pug
+include ../blocks/sPress/_sPress.pug
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= '03-clients'
+	- let  title= '06-press'
 	title= title
 block pagecontent
 	+mob-mnu()
 	+header()
 		+top-nav()
-	+sClientsPage()
-		+breadcrumb('Главная ', 'Клиенты и отзывы')
-	+sFbPills()
-	+sFormAlt()
+	+sPress()
+		+breadcrumb('Главная ', 'Пресс-центр')
 	+footer()

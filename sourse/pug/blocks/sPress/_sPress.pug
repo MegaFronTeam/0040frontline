@@ -1,0 +1,26 @@
+mixin sPress(data)
+	// start sPress
+	+b.SECTION.sPress.section#sPress&attributes(attributes)
+		+e.container.container
+			block
+			+b.section-title
+				h1 Пресс-центр
+			+b.sNews
+				+e.row.row
+					+sNewItem(1)
+					+sNewItem(2)
+					+sNewItem(3)
+					+sNewItem(1)
+					+sNewItem(2)
+					+sNewItem(3)
+					+sNewItem(1)
+					+sNewItem(2)
+					+sNewItem(3)
+					+sNewItem(1, 'd-none d-lg-block')
+					+sNewItem(2, 'd-none d-lg-block')
+					+sNewItem(3, 'd-none d-lg-block')
+					+sNewItem(1, 'd-none d-lg-block')
+					+sNewItem(2, 'd-none d-lg-block')
+					+sNewItem(3, 'd-none d-lg-block')
+			+pugin()(class="bg-light")
+	// end sPress

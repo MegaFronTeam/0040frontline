@@ -40,6 +40,9 @@
 	}
 	&__item{
 		border-bottom: 1px solid $gray-290;
+		&:last-child{
+			border-bottom: none;
+		}
 
 		@include media-breakpoint-up(sm){
 			padding: rem(10) 0;
@@ -232,6 +235,27 @@
 			margin-bottom: 0;
 		}
 	}
+
+	//
+	&__serv-row{
+
+	}
+	&__s-col{
+		a{
+			display: block;
+
+			margin-bottom: 6px;
+			@include media-breakpoint-up(sm){
+				margin-bottom: 10px;
+			}
+
+			color: $body-color;
+			&:hover{
+				color: $primary;
+			}
+		}
+	}
+
 	//
 	&__{}
 	&__{}

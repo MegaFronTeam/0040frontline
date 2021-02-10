@@ -14,22 +14,17 @@ include ../blocks/sAllCountry/_sAllCountry.pug
 include ../blocks/sSertificats/_sSertificats.pug
 include ../blocks/sTeamRow/_sTeamRow.pug
 include ../blocks/sOurPeople/_sOurPeople.pug
-include ../blocks/sFbPills/_sFbPills.pug
-include ../blocks/sFormAlt/_sFormAlt.pug
-include ../blocks/sVacancy/_sVacancy.pug
-include ../blocks/sDescr/_sDescr.pug
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= '04-vacancy'
+	- let  title= '03-team'
 	title= title
 block pagecontent
 	+mob-mnu()
 	+header()
 		+top-nav()
-	+sVacancy()
-		+breadcrumb('Главная ', 'Вакансии')
-	+sFormAlt2()
-	+sDescr()
+	+sTeamRow()
+		+breadcrumb('Главная ', 'Команда')
+	+sOurPeople()
 	+footer()

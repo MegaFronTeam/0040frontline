@@ -259,7 +259,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '05-320.png';
+	screenName = '06-320.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -445,6 +445,9 @@ function eventHandler() {
 		} //.vac-head-js
 		//.vac-cont-js
 		//end luckyone Js
+		//todo
+		// 1 select2
+		// 2 customers desires
 
 	} catch (err) {
 		_iterator.e(err);

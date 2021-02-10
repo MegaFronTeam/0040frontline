@@ -1,0 +1,44 @@
+// start .sPress
+.sPress {
+	--sPT: 10px;
+	--sTPB: 23px;
+	--sPB: 55px;
+	@include media-breakpoint-up(sm){
+		--sPT: #{rem(35)};
+		--sTPB: #{rem(45)};
+		--sPB: #{rem(128)};
+	}
+
+	.breadcrumb-par{
+		margin-bottom: 13px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(22);
+		}
+	}
+
+	&__container{
+		@include media-breakpoint-down(sm){
+			padding: 0 10px;
+		}
+
+		@include media-breakpoint-up(xl){
+			padding: 0 10px;
+		}
+	}
+	.section-title{
+		h1{
+			font-weight: bold;
+			font-size: 26px;
+			@include media-breakpoint-up(sm){
+				font-size: rem(64);
+			}
+		}
+	}
+
+	.sNews{
+		@include media-breakpoint-down(sm){
+			padding-bottom: 12px;
+		}
+	}
+
+} // end.sPress

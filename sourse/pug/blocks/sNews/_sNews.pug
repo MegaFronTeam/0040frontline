@@ -12,8 +12,8 @@ mixin sNews(data)
 				+e.btn(href='#') Смотреть все новости
 	// end sNews
 
-mixin sNewItem(imgNum)
-	.col-12.col-lg-4
+mixin sNewItem(imgNum, addClasses)
+	.col-12.col-lg-4(class=addClasses)
 		+e.item-row.row
 			+e.i-col.col-12.col-sm-6.col-lg-12
 				+e.img(href='#')

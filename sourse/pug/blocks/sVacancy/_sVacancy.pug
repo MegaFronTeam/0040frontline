@@ -44,3 +44,37 @@ mixin vacCRow(title)
 		+e.c-title.col-md-3.col-xl-2=title
 		+e.c-content.col-md-9.col-xl-10
 			block
+
+mixin sServicesPage(data)
+	// start sVacancy
+	+b.SECTION.sVacancy.section#sVacancy&attributes(attributes)
+		+e.container.container
+			block
+			+b.section-title
+				h1 Вакансии
+			+e.items
+				+servicesPageItem('Готовые решения')
+				+servicesPageItem('Входящие звонки')
+				+servicesPageItem('Исходящие звонки')
+				+servicesPageItem('Другие услуги', 'active')
+				+servicesPageItem('Искусственный интеллект')
+
+mixin servicesPageItem(name ,activeClass='')
+	+e.item
+		+e.header.vac-head-js(class=activeClass)
+			+e.name=name
+			+e.ball
+				+e.ball-icon
+		+e.content.vac-cont-js(class=activeClass)
+			+e.serv-row.row
+				+e.s-col.col-12.col-sm-6.col-lg-4
+					a(href='#') Номер 8 800
+					a(href='#') Аренда рабочего места
+					a(href='#') Обработка данных заказчика
+					a(href='#') SMS-рассылка
+				+e.s-col.col-12.col-sm-6.col-lg-4
+					a(href='#') Консалтинг в области C all-центров
+					a(href='#') Почтовая рассылка
+					a(href='#') Аренда оператора
+
+
