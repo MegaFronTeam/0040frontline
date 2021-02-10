@@ -242,7 +242,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = '04-320.png';
+	screenName = '05-320.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -428,6 +428,32 @@ function eventHandler() {
 		},
 
 	});
+
+	//vacancy js
+	let allHead = document.querySelectorAll('.vac-head-js');
+	for (let head of allHead){
+		head.addEventListener('click', function (){
+			let clickedHead = this;
+
+			$(allHead).each(function (){
+				if (this === clickedHead){
+					$(this).toggleClass('active');
+					$(this.parentElement).find('.vac-cont-js').slideToggle(function (){
+						$(this).toggleClass('active');
+					});
+				}
+				else{
+					$(this).removeClass('active');
+					$(this.parentElement).find('.vac-cont-js').slideUp(function (){
+						$(this).removeClass('active');
+					});
+				}
+			});
+
+		});
+	}
+	//.vac-head-js
+	//.vac-cont-js
 
 	//end luckyone Js
 

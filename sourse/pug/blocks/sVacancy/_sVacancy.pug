@@ -1,0 +1,46 @@
+mixin sVacancy(data)
+	// start sVacancy
+	+b.SECTION.sVacancy.section#sVacancy&attributes(attributes)
+		+e.container.container
+			block
+			+b.section-title
+				h1 Вакансии
+			+e.items
+				+vacancyItem()
+				+vacancyItem()
+				+vacancyItem('active')
+				+vacancyItem()
+				+vacancyItem()
+				+vacancyItem()
+				+vacancyItem()
+	// end sVacancy
+
+mixin vacancyItem(activeClass='')
+	+e.item
+		+e.header.vac-head-js(class=activeClass)
+			+e.name Специалист контактного центра
+			+e.ball
+				+e.ball-icon
+		+e.content.vac-cont-js(class=activeClass)
+			+vacCRow('Обязанности')
+				p Ведение телефонных переговоров
+				p Прием входящих обращений
+				p Совершение исходящих звонков
+				p Сервисное обслуживание клиентов
+			+vacCRow('Требования')
+				p Владение ПК (MS Word, Excel, Internet) на уровне пользователя
+				p Грамотная речь, четкая дикция
+				p Ответственность и стрессоустойчивость
+			+vacCRow('Условия')
+				p Оформление согласно законодательству РФ
+				p Бесплатное обучение
+				p Соц. пакет
+				p Перспективы карьерного и профессионального роста
+				p Дотация на питание
+				p Оклад + премии, бонусы
+
+mixin vacCRow(title)
+	+e.c-row.row
+		+e.c-title.col-md-3.col-xl-2=title
+		+e.c-content.col-md-9.col-xl-10
+			block

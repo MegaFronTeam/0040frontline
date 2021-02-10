@@ -21,3 +21,29 @@ mixin sFormAlt(data)
 					+e.img
 						img(loading="lazy" src="img/svg/chat-img.svg" alt="")
 	// end sFormAlt
+
+mixin sFormAlt2(data)
+	// start sFormAlt
+	+b.SECTION.sFormAlt--interview.section#sFormAlt&attributes(attributes)
+		+e.bg--bot
+			img(loading="lazy" src="img/svg/sForm-bg.svg" alt="")
+		+e.container.container
+			+e.row.row
+				+e.inp-col.col-md-11.col-lg-8
+					+b.section-title.text-center.text-sm-start
+						h2
+							| Запишитесь
+							br.d-none.d-sm-block
+							| на собеседование
+						p Заполните форму и отправьте нам - мы перезвоним
+					+form-wrap
+						+e.row.row
+							+e.ta-col.col-12.col-sm
+								+input('Напишите комментарий', 'textarea')
+							.col-12.col-sm-auto
+								+input('Введите ваше имя', 'text', undefined, 'name')
+								+input('Введите телефон или email', 'text')
+								+e.BUTTON.btn(type="submit") Записаться на&#160;собеседование
+				+e.img-col.col-lg-4.d-none.d-lg-flex
+					+e.img
+						img(loading="lazy" src="img/svg/chat-img-2.svg" alt="")
