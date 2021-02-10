@@ -62,8 +62,34 @@ mixin partnerSlide(number='')
 							+e.fb-txt=`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec massa id nulla elementum fermentum. Maecenas imperdiet tristique sapien eget faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan neque ac ex molestie, at sodales massa maximus. Nullam faucibus volutpat metus, a scelerisque ligula convallis at. Sed dapibus massa urna.${number}`
 							+certificat('d-none d-md-block')
 
-mixin certificat(addClasses='')
+mixin certificat(addClasses='', commonLazy=false)
 	+e.cert-cont(href="img/@2x/certifact.jpg" data-fancybox="certificat1" class=addClasses)
 		+e.cert-img
-			img.swiper-lazy(src="#" data-src="img/@2x/certifact-sm.png" alt="")
+			if commonLazy
+				img(loading="lazy" src="img/@2x/certifact-sm.png" alt="")
+			else
+				img.swiper-lazy(src="#" data-src="img/@2x/certifact-sm.png" alt="")
 		+e.cert-txt Отзыв на бланке компании
+
+mixin partnerPill(number='')
+	+e.pill
+		+e.slide-cont
+			+e.slide-row.row
+				+e.port-col.col-auto
+					+e.port-cont--fixed-size
+						+e.portrait
+							img(loading="lazy" src=`img/@2x/partner-slide-1.jpg` alt="")
+					+certificat('d-md-none', true)
+				+e.txt-col.col-12.col-lg
+					+e.txt-row.row
+						+e.tt-item.col-auto
+							+e.t-title Клиент
+							+e.t-val Название компании
+						+e.tt-item.col-auto
+							+e.t-title Услуга
+							+e.t-val Клиентский сервис и поддержка
+					+e.feedback
+						+e.t-title Отзыв
+						+e.fb-content
+							+e.fb-txt=`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec massa id nulla elementum fermentum. Maecenas imperdiet tristique sapien eget faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan neque ac ex molestie, at sodales massa maximus. Nullam faucibus volutpat metus, a scelerisque ligula convallis at. Sed dapibus massa urna.${number}`
+							+certificat('d-none d-md-block', true)

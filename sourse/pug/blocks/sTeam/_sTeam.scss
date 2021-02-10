@@ -16,6 +16,26 @@
 		--sTPB: #{rem(51)};
 	}
 
+	&--alt{
+		z-index: 2;
+		@include media-breakpoint-down(sm){
+			//--sPT: #{rem(89)};
+			--sPB: 56px;
+			--sTPB: 9px;
+		}
+		@include media-breakpoint-up(lg){
+			--sPT: #{rem(89)};
+			--sPB: #{rem(73)};
+			--sTPB: #{rem(28)};
+		}
+
+		.sTeam__bg{
+			@include media-breakpoint-up(xl){
+				clip-path: polygon(0 1%,88.5% 6.3%,114% 0,100% 99%,10% 93%,0 96%);
+			}
+		}
+	}
+
 	position: relative;
 	z-index: 1;
 	&__bg{
@@ -63,7 +83,17 @@
 
 			@include media-breakpoint-down(sm){
 				font-size: 26px;
+				margin-bottom: 17px;
 			}
+			margin-bottom: 17px;
+		}
+
+		p{
+			font-size: 11px;
+			@include media-breakpoint-up(sm){
+				font-size: rem(18px);
+			}
+			line-height: 1.68;
 		}
 	}
 

@@ -106,50 +106,59 @@ $h: em(2);
 			opacity: 1;
 		}
 	}
+	&__close-btn{
+		margin-left: auto;
 
-	.toggle-menu-mobile {
-		// position: relative;
-		cursor: pointer;
-		margin-left: -15%;
-		position: absolute;
-		opacity: 0;
-		left: 0;
-		right: auto;
-		color: #FFF;
-		top: 10px;
-		z-index: 9999;
-		background-color: transparent;
-
-		span,
-		span:after,
-		span:before {
-			background-color: #FFF;
+		.icon{
+			font-size: 21px;
+			color: $black;
 		}
+	}
 
-		&.on {
-			opacity: 1;
+	.navMenu{
+		display: block;
+		padding: 0;
+		margin: 0 0 24px 0;
+		&__item{
+			padding: 0;
+			margin: 0 0 14px 0;
+			&:last-child{
+				margin: 0;
+			}
+		}
+		&__link{
+			text-align: left;
+			display: block;
+			padding: 0;
+			margin: 0;
 
-			span {
-				background-color: transparent;
+			font-size: 16px;
+			line-height: (20/16);
+			color: $black;
+
+			&.active{
+				color: $primary;
 			}
 		}
 	}
 
-	ul {
-		position: relative;
-	}
-
-	li {
-		display: block;
-		margin: 0;
-		border-top: 1px solid rgba(255, 255, 255, .13);
-
-		a {
-			// font-size: 16px;
-
-			padding: 10px;
-			display: block;
-
+	.top-nav{
+		width: auto;
+		&__search{
+			margin-bottom: 20px;
+			width: 198px;
+		}
+		&__input{
+			width: 100%;
+			padding-top: 13px;
+			padding-bottom: 13px;
+		}
+		&__calc-btn{
+			min-width: 198px;
+			padding-top: 13px;
+			padding-bottom: 13px;
 		}
 	}
+
+
 }

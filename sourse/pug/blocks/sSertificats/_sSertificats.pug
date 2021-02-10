@@ -1,0 +1,28 @@
+mixin sSertificats(data)
+	// start sSertificats
+	+b.SECTION.sSertificats.section#sSertificats&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h2 СЕРТИФИКАТЫ
+			+e.slider
+				.swiper-container.certificat-slider-js
+					.swiper-wrapper
+						+sertificatSlider()
+						+sertificatSlider()
+						+sertificatSlider()
+						+sertificatSlider()
+						+sertificatSlider()
+						+sertificatSlider()
+				+b.cert-prev--js
+					+icon('arrow-left', 'd-none d-sm-block')
+					+icon('arrow-l-sm', 'd-sm-none')
+				+b.cert-next--js
+					+icon('arrow-right', 'd-none d-sm-block')
+					+icon('arrow-r-sm', 'd-sm-none')
+			+b.cert-pugin--js
+	// end sSertificats
+
+mixin sertificatSlider()
+	.swiper-slide
+		+e.img(href="img/@2x/cert-img.png" data-fancybox="certificats")
+			img.swiper-lazy(src="#" data-src="img/@2x/cert-img.png" alt="")

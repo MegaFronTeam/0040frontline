@@ -1,0 +1,31 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sHSlider/_sHSlider.pug
+include ../blocks/sService/_sService.pug
+include ../blocks/sFeedback/_sFeedback.pug
+include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sClients/_sClients.pug
+include ../blocks/sAllCountry/_sAllCountry.pug
+include ../blocks/sSertificats/_sSertificats.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '01-about'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+sAbout()
+		+breadcrumb('Главная ', 'О компании')
+	+sClients()
+	+sTeam(true)(class="sTeam--alt")
+	+sAllCountry()
+	+sSertificats()
+	+footer()

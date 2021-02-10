@@ -1,0 +1,20 @@
+mixin sTeamRow(data)
+	// start sTeamRow
+	+b.SECTION.sTeamRow.section#sTeamRow&attributes(attributes)
+		+e.container.container
+			block
+			+b.section-title
+				h1 Команда
+			+e.row.row
+				- for (var i = 1; i <= 12; i++)
+					+teamRowItem()
+	// end sTeamRow
+
+mixin teamRowItem()
+	+e.col.col-6.col-md-4
+		+e.item
+			+e.img(href='#')
+				img(loading="lazy" src="img/@2x/teamRow-img.jpg" alt="")
+			+e.name Имя фамиля
+			+e.duty Должность
+			+e.descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.

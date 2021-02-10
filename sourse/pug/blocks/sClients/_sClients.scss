@@ -1,0 +1,131 @@
+// start .sClients
+.sClients {
+	--sPT: 27px;
+	--sTPB: 17px;
+	--sPB: 38px;
+	@include media-breakpoint-up(sm){
+		--sPT: #{rem(30)};
+		--sTPB: #{rem(40)};
+		--sPB: 30px;
+	}
+	@include media-breakpoint-up(xl){
+		--sPT: #{69px};
+		--sTPB: #{rem(50)};
+		--sPB: 60px;
+	}
+
+	.breadcrumb-par{
+		margin-bottom: 16px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(24);
+		}
+	}
+
+	&--alt{
+		@include media-breakpoint-down(sm){
+			--sPT: 9px;
+			--sTPB: 20px;
+			--sPB: 5px;
+		}
+		@include media-breakpoint-up(xl){
+			--sPT: 34px;
+			--sTPB: 51px;
+			--sPB: 41px;
+		}
+		.sClients__container{
+			@include media-breakpoint-up(xxl){
+				padding: 0 11px;
+			}
+		}
+
+	}
+
+
+	&__container{
+		@include media-breakpoint-down(sm){
+			padding: 0 10px;
+		}
+	}
+	.section-title{
+		h2{
+			text-transform: uppercase;
+
+			margin-bottom: rem(24);
+			@include media-breakpoint-down(sm){
+				font-size: 26px;
+				margin-bottom: 15px;
+				font-weight: 600;
+			}
+		}
+
+		h1{
+			@include media-breakpoint-down(sm){
+				font-size: 26px;
+				margin-bottom: 12px;
+			}
+
+			font-size: rem(64);
+			margin-bottom: 38px;
+		}
+
+		p{
+			font-size: 11px;
+			line-height: 1.65;
+			@include media-breakpoint-up(sm){
+				font-size: rem(18);
+				line-height: 1.65;
+			}
+		}
+	}
+	.sFeedback{
+		&__row{
+			padding-bottom: 34px;
+			@include media-breakpoint-up(sm){
+				padding-bottom: rem(37);
+			}
+		}
+		&__{}
+		&__{}
+	}
+
+	&__tartget{
+		padding: 22px 6px 13px;
+		@include media-breakpoint-up(sm){
+			padding: rem(40) rem(20) rem(35);
+		}
+		@include media-breakpoint-up(xxl){
+			padding: 42px 40px 35px;
+		}
+
+		border: 3px solid $danger;
+		border-image: linear-gradient(54.42deg, #FF8034 -0.47%, #FF394D 88.37%);
+		border-image-slice: 1;
+
+		h3{
+			font-weight: bold;
+
+			font-size: 20px;
+			margin-bottom: 11px;
+			@include media-breakpoint-up(sm){
+				font-size: rem(36);
+				line-height: (44/36);
+				margin-bottom: rem(24);
+			}
+		}
+		p{
+			max-width: 695px;
+			margin-left: auto;
+			margin-right: auto;
+			line-height: 1.65;
+
+			font-size: 11px;
+			@include media-breakpoint-up(sm){
+				font-size: rem(18);
+			}
+		}
+	}
+
+	//
+	&__{}
+	&__{}
+} // end.sClients

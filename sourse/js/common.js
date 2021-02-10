@@ -242,7 +242,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = '01-320.png';
+	screenName = '04-320.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -391,6 +391,38 @@ function eventHandler() {
 		//pagination
 		pagination: {
 			el: '.team-pugin--js',
+			type: 'bullets',
+			clickable: true,
+		},
+
+	});
+
+	let certificatSlider = new Swiper('.certificat-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+
+		breakpoints: {
+			0 : {
+				spaceBetween: 16,
+			},
+			1200 : {
+				spaceBetween: 40
+			},
+		},
+
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 6,
+		},
+		//nav
+		navigation: {
+			nextEl: '.cert-next--js',
+			prevEl: '.cert-prev--js',
+		},
+		//pagination
+		pagination: {
+			el: '.cert-pugin--js',
 			type: 'bullets',
 			clickable: true,
 		},

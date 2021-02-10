@@ -4,6 +4,12 @@ mixin mob-mnu()
 			+e.close-btn(class="toggle-menu-mobile--js")
 				+icon('cross')
 			+mnu()
+			+b.top-nav
+				+e.search
+					+input('Поиск', 'text')
+					+e.BUTTON.search-btn(type="submit")
+						+icon('zoom')
+				+e.calc-btn(href='#') Рассчитать стоимость
 	//  мобильное меню
 
 mixin top-nav() 

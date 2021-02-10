@@ -1,0 +1,43 @@
+mixin sClients(data)
+	// start sClients
+	+b.SECTION.sClients.section#sClients&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h2
+					span Клиенты
+					br.d-sm-none
+					span.d-sm-none и отзывы
+				p Наши клиенты — это банки и операторы связи, производители продуктов питания и центры развлечений, а также любые другие компании, для которых сотрудничество с нами является гарантией выхода на новый, качественно более высокий уровень развития.
+			+b.sFeedback
+				+e.row.row
+					+partnerItem(1)
+					+partnerItem(2)
+					+partnerItem(3)
+					+partnerItem(4)
+					+partnerItem(5)
+					+partnerItem(6)
+					+partnerItem(7)
+					+partnerItem(8)
+			+e.tartget.text-center
+				h3 Цель компании
+				p Основная цель компании — развитие собственных уникальных решений в сфере информатизации общества и бизнеса, создание единой мировой системы управления информационными коммуникациями.
+	// end sClients
+
+mixin sClientsPage(data)
+	// start sClients
+	+b.SECTION.sClients--alt.section#sClients&attributes(attributes)
+		+e.container.container
+			block
+			+b.section-title
+				h1 Клиенты и отзывы
+				p Наши клиенты — это банки и операторы связи, производители продуктов питания и центры развлечений, а также любые другие компании, для которых сотрудничество с нами является гарантией выхода на новый, качественно более высокий уровень развития.
+			+b.sFeedback
+				+e.row.row
+					+partnerItem(1)
+					+partnerItem(2)
+					+partnerItem(3)
+					+partnerItem(4)
+					+partnerItem(5)
+					+partnerItem(6)
+					+partnerItem(7)
+					+partnerItem(8)

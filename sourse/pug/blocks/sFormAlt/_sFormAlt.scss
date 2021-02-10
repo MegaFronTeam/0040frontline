@@ -1,0 +1,201 @@
+// start .sFormAlt
+.sFormAlt {
+  --sPT: 45px;
+  --sTPB: 23px;
+  --sPB: 72px;
+  @include media-breakpoint-up(sm){
+    --sPT: #{rem(100)};
+    --sTPB: #{rem(28px)};
+    --sPB: #{rem(110)};
+  }
+
+  color: $white;
+  position: relative;
+  z-index: 2;
+  &__bg{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &:before{
+      content: '';
+      position: absolute;
+      z-index: -2;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #FF4444 -0.81%, #FF8731 100%);
+    }
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    clip-path: polygon(100% 3%, 100% 100%, 0 100%, 0 0);
+    @include media-breakpoint-up(sm){
+      clip-path: polygon(79% 4%,100% 0,100% 100%,0 100%,0 0);
+    }
+    @include media-breakpoint-up(xxl){
+      clip-path: polygon(85% 8%,108% 0,100% 100%,0 100%,0 0);
+    }
+  }
+
+  &__container{
+    @include media-breakpoint-down(sm){
+      padding: 0 40px;
+      max-width: 380px;
+    }
+    @include media-breakpoint-up(xxl){
+      padding: 0 10px;
+    }
+  }
+
+  &__row{
+
+  }
+  &__inp-col{
+    @include media-breakpoint-up(lg){
+      padding-right: rem(45);
+    }
+    @include media-breakpoint-up(xl){
+      padding-right: rem(87);
+    }
+  }
+  .section-title{
+    @include media-breakpoint-up(sm){
+      max-width: rem(440);
+    }
+
+    h2{
+      font-weight: bold;
+
+      font-size: 20px;
+      margin-bottom: 10px;
+      @include media-breakpoint-up(sm){
+        font-size: rem(38);
+        margin-bottom: rem(26);
+      }
+    }
+    p{
+      line-height: 1.65;
+
+      font-size: 13px;
+      @include media-breakpoint-up(sm){
+        font-size: rem(20);
+      }
+    }
+  }
+
+  .form-wrap{
+    padding: 0 10px;
+    @include media-breakpoint-up(sm){
+      padding: 0;
+    }
+
+    &__row{
+      @include roww(10px);
+      @include media-breakpoint-up(sm){
+        @include roww(19px);
+      }
+    }
+    //
+    &__ta-col{
+      @include media-breakpoint-up(sm){
+        .form-wrap__input-wrap{
+          height: 100%;
+          textarea{
+            height: 100%;
+          }
+        }
+      }
+    }
+    //
+    &__input-wrap{
+      width: auto;
+
+      margin-bottom: 10.5px;
+      @include media-breakpoint-up(sm){
+        margin-bottom: 14px;
+      }
+
+      textarea{
+        width: 100%;
+        border-radius: 28px;
+
+        padding: rem(22px) rem(38px);
+        @include media-breakpoint-down(sm){
+          height: 117px;
+          padding: 15px 16px;
+        }
+
+        @include placeholder(){
+          @include media-breakpoint-down(sm){
+            padding-right: 67px;
+          }
+        }
+      }
+      input{
+        padding: 18px 23px;
+        @include media-breakpoint-up(sm){
+          width: rem(244);
+          padding: rem(22px) rem(22px);
+        }
+      }
+    }
+    //ta, inp
+    &__input{
+      font-size: 13px;
+      line-height: (16/13);
+      @include media-breakpoint-up(sm){
+        font-size: 13px;
+      }
+
+      @include placeholder(){
+        color: $black!important;
+      }
+    }
+    &__btn{
+      @extend .default-btn;
+
+      min-width: 100%;
+      @include media-breakpoint-up(sm){
+        min-width: rem(244);
+      }
+
+      padding: rem(19.5) rem(25);
+      border: 3px solid $white!important;
+    }
+  }
+  &__img-col{
+    padding-top: rem(77);
+
+    @include media-breakpoint-up(xxl){
+      padding-right: 25px;
+    }
+
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__img{
+
+    img{
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+  &__{}
+  &__{}
+  &__{}
+  &__{}
+  &__{}
+  &__{}
+  &__{}
+  &__{}
+} // end.sFormAlt

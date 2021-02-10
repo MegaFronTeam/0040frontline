@@ -1,0 +1,13 @@
+mixin sAbout(data)
+	// start sAbout
+	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
+		+e.container.container
+			block
+			+b.section-title
+				h1 О компании
+				p Контакт-центр «Фронт Лайн» — это современная аутсорсинговая компания, созданная профессионалами в сфере информационно-коммуникационных технологий и ориентированная на работу в B2B и B2С сегментах рынка. Компания оказывает услуги государственным и коммерческим заказчикам в области продвижения товаров и услуг с использованием современных электронных коммуникационных технологий, услуги лидогенерации, обзвона и т. д.
+			+e.PICTURE.img
+				source(srcset='img/@2x/about-img.jpg' type='image/webp' media="(min-width: 400px)")
+				source(srcset='img/@2x/about-img-sm.jpg' type='image/webp' media="(max-width: 400px)")
+				img(loading="lazy" src='img/@2x/about-img-sm.jpg' alt="")
+	// end sAbout

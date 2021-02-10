@@ -14,6 +14,34 @@ mixin mnu()
 		each linkPatch, linkName in nav
 			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
 //- /menu
+mixin mnu()
+	-
+		var nav= {
+			"Главная":"#",
+			"О компании":"#",
+			"Команда":"#",
+			"Клиенты и отзывы":"#",
+			"Пресс-центр":"#",
+			"Вакансии":"#",
+			"Контакты":"#",
+		}
+	+b.UL.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		+e.LI.item
+			+e.A.link(href='#') Главная
+		+e.LI.item
+			+e.A.link(href='#') О компании
+		+e.LI.item
+			+e.A.link.active(href='#') Команда
+		+e.LI.item
+			+e.A.link(href='#') Клиенты и отзывы
+		+e.LI.item
+			+e.A.link(href='#') Пресс-центр
+		+e.LI.item
+			+e.A.link(href='#') Вакансии
+		+e.LI.item
+			+e.A.link(href='#') Контакты
+
+
 
 //- menu
 mixin mnu2()

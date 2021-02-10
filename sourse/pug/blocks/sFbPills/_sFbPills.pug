@@ -1,0 +1,16 @@
+mixin sFbPills(data)
+	// start sFbPills
+	+b.SECTION.sFbPills.section#sFbPills&attributes(attributes)
+		+e.bg
+			img(loading="lazy" src="img/svg/sFbPills-bg.svg" alt="")
+		+e.container.container
+			+b.section-title.d-none.d-sm-block
+				h2 ОТЗЫВЫ
+			+b.sFeedback
+				+partnerPill()
+				+partnerPill()
+				+partnerPill()
+				+partnerPill()
+				+partnerPill()
+			+pugin()
+	// end sFbPills

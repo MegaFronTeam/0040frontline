@@ -228,6 +228,13 @@
 	}
 	&__port-cont{
 		flex-grow: 1;
+
+		&--fixed-size{
+			@include media-breakpoint-down(sm){
+				flex-grow: 0;
+				width: 117px;
+			}
+		}
 	}
 
 	&__portrait{
@@ -339,6 +346,21 @@
 		}
 		line-height: 1.35;
 		margin-right: -15px;
+	}
+
+	//sFbPills
+	&__pill{
+		border: 3px solid $danger;
+		border-image: linear-gradient(54.42deg, #FF8034 -0.47%, #FF394D 88.37%);
+		border-image-slice: 1;
+
+		background-color: $white;
+
+
+		margin-bottom: 16px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(36);
+		}
 	}
 	//
 	&__{}

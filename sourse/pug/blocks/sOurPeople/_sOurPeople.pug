@@ -1,0 +1,22 @@
+mixin sOurPeople(data)
+	// start sOurPeople
+	+b.SECTION.sOurPeople.section#sOurPeople&attributes(attributes)
+		+e.bg
+			img(loading="lazy" src="img/svg/our-people-bg.svg" alt="")
+		+e.container.container
+			+b.section-title
+				h2 НАШИ ЛЮДИ
+			+e.row.row
+				.col-12.col-md-7
+					+ourPepleItem()
+				.col-6.col-md-5
+					+ourPepleItem()
+				.col-6.col-md-5
+					+ourPepleItem()
+				.col-12.col-md-7
+					+ourPepleItem()
+	// end sOurPeople
+
+mixin ourPepleItem()
+	+e.item(href='img/@2x/about-img.jpg' data-fancybox="peopleGalery")
+		img(loading="lazy" src="img/@2x/about-img.jpg" alt="")
