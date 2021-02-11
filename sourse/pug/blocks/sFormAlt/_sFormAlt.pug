@@ -47,3 +47,26 @@ mixin sFormAlt2(data)
 				+e.img-col.col-lg-4.d-none.d-lg-flex
 					+e.img
 						img(loading="lazy" src="img/svg/chat-img-2.svg" alt="")
+
+mixin sFormAlt3(data)
+	// start sFormAlt
+	+b.SECTION.sFormAlt--order.section#sFormAlt&attributes(attributes)
+		+e.bg
+			img(loading="lazy" src="img/svg/sForm-bg.svg" alt="")
+		+e.container.container
+			+e.row.row
+				+e.inp-col.col-md-11.col-lg-8
+					+b.section-title.text-center.text-sm-start
+						h2 Закажите прайс-лист
+						p Заполните форму и отправьте нам — мы перезвоним в течение рабочего дня
+					+form-wrap
+						+e.row.row
+							+e.ta-col.col-12.col-sm
+								+input('Напишите комментарий', 'textarea')
+							.col-12.col-sm-auto
+								+input('Введите ваше имя', 'text', undefined, 'name')
+								+input('Введите телефон или email', 'email')
+								+e.BUTTON.btn(type="submit") Записаться на собеседование
+				+e.img-col.col-lg-4.d-none.d-lg-flex
+					+e.img
+						img(loading="lazy" src="img/svg/orderPl.svg" alt="")

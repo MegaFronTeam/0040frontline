@@ -1,0 +1,29 @@
+mixin sBase(data)
+	// start sBase
+	+b.SECTION.sBase.section#sBase&attributes(attributes)
+		+e.bg
+			img(loading="lazy" src="img/svg/sBase-bg.svg" alt="")
+		+e.container.container
+			+b.section-title
+				h2 Базовый пакет
+			+e.row.row
+				+baseItem(['Выделение (подключение) номера'], '25 000 ₽')
+					| Подготовка проекта
+					br
+					| «Горячая линия»
+				+baseItem(['1 000 минут работы оператора по обработке вызовов', 'Абонентская плата', 'Администрирование проекта', 'Техническая поддержка проекта'], 'от 54 000 ₽')
+					| Ежемесячный
+					br
+					| платеж
+	// end sBase
+
+mixin baseItem(list, price)
+	.col-12.col-md-6
+		+e.item
+			+e.title(href='#')
+				block
+			+e.content
+				ul
+					-for(var i = 0; i < list.length; i++)
+						li=list[i]
+			+e.price=price

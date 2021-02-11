@@ -259,7 +259,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '06-320.png';
+	screenName = '08-320.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -448,6 +448,7 @@ function eventHandler() {
 		//todo
 		// 1 select2
 		// 2 customers desires
+		// 3 fix menu 1920 +
 
 	} catch (err) {
 		_iterator.e(err);

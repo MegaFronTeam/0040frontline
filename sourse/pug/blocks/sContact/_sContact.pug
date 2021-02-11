@@ -1,9 +1,49 @@
 mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+		+e.container.container
+			block
+			+b.section-title
+				h1 Контакты
+			+e.row.row
+				+e.items-col.col-lg-5.pb-lg-0.col-xl-4
+					+e.sub-row.row
+						+contactItem('contact-svg-1', 'Телефон')
+							+e.tel(href='tel:+74957893859') +7 495 789 38 59
+						+contactItem('contact-svg-2', 'Email')
+							+e.mail(href='mailto:info@frontline-cc.ru') info@frontline-cc.ru
+						+contactItem('contact-svg-3', 'Время работы')
+							+e.txt
+								| Коммерческий отдел: 8:00–19:00
+								|
+								br
+								| Колл-центр: 24/7
+						+contactItem('contact-svg-4', 'Адрес офиса')
+							+e.txt
+								| Москва, ул. Новодмитровская,
+								|
+								br.d-sm-none.d-xl-block
+								| дом 2, корпус 6, этаж 8,
+								|
+								br.d-sm-none.d-xl-block
+								| помещение 82, офис 153М
+				+e.map-col.col-lg-7.col-xl-8
+					+e.map
+						img(loading="lazy" src="img/@2x/map-img.png" alt="")
+						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5a3a34d34557d301a8f6dfc8216f523918883431392e3d018bd5e72b65e06f53&amp;width=818&amp;height=580&amp;lang=ru_RU&amp;scroll=false"></script>
+			+e.props
+				+e.p-title Реквизиты
+				+e.p-txt
+					| Общество с Ограниченной Ответственностью «Коннект Лайн»
+					br
+					| ИНН 7704450680 • КПП 771501001 • ОГРН 1187746094381
 	// end sContact
+
+mixin contactItem(icon, title='')
+	.col-12.col-sm-6.col-lg-12
+		+e.item
+			+e.square
+				img(loading="lazy" src=`img/svg/${icon}.svg` alt="")
+			+e.content
+				+e.title=title
+				block

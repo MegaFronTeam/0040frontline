@@ -1,0 +1,51 @@
+mixin sHotlines(data)
+	// start sHotlines
+	+b.SECTION.sHotlines.section#sHotlines&attributes(attributes)
+		+e.container.container
+			block
+			+b.section-title
+				h1 Горячие линии
+				p Предлагаем круглосуточную «Горячую линию» и коммуникационную поддержку вашего бизнеса. Контакт-центр «Фронт Лайн» — это эффективный телефонный маркетинг и современные информационные технологии.
+				p Услуга «Горячая линия» предоставляет абонентам возможность в любое время задать вопрос на интересующую тему и немедленно получить квалифицированный ответ специалиста. Она наглядно демонстрирует вашу заботу об интересах клиента, укрепляет имидж компании и способствует расширению клиентской базы.
+			+e.btn-cont
+				+e.btn(href='#') Заказать прайс-лист
+			+e.pills-title В зависимости от профиля и сферы деятельности предприятия горячая линия может иметь различную специфику
+			+e.row.row
+				+hotlineItem(1)
+					| Техническая
+					|
+					br.d-none.d-sm-block
+					| поддержка
+				+hotlineItem(2)
+					| Консультативная
+					|
+					br.d-none.d-sm-block
+					| помощь
+				+hotlineItem(3)
+					| Информационно-
+					br.d-none.d-sm-block
+					| справочные услуги
+				+hotlineItem(4)
+					| Прием и обработка
+					|
+					br.d-none.d-sm-block
+					| телефонных заказов
+				+hotlineItem(5)
+					| Обслуживание
+					|
+					br.d-none.d-sm-block
+					| рекламных акций
+				+hotlineItem(6)
+					| Прием обращений
+					|
+					br.d-none.d-sm-block
+					| от потребителей
+
+	// end sHotlines
+mixin hotlineItem(icon, title)
+	+e.col.col-12.col-sm-6.col-lg-4
+		+e.item
+			+e.square
+				img(loading="lazy" src=`img/svg/hotline-item-${icon}.svg` alt="")
+			+e.title
+				block

@@ -1,0 +1,35 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sHSlider/_sHSlider.pug
+include ../blocks/sService/_sService.pug
+include ../blocks/sFeedback/_sFeedback.pug
+include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sClients/_sClients.pug
+include ../blocks/sAllCountry/_sAllCountry.pug
+include ../blocks/sSertificats/_sSertificats.pug
+include ../blocks/sTeamRow/_sTeamRow.pug
+include ../blocks/sOurPeople/_sOurPeople.pug
+include ../blocks/sFbPills/_sFbPills.pug
+include ../blocks/sFormAlt/_sFormAlt.pug
+include ../blocks/sVacancy/_sVacancy.pug
+include ../blocks/sDescr/_sDescr.pug
+include ../blocks/sPress/_sPress.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '09-contacts'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+sContact()
+		+breadcrumb('Главная ', 'Контакты')
+	+sForm()
+	+footer()
