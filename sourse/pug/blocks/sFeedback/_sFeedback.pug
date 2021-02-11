@@ -18,7 +18,7 @@ mixin sFeedback(data)
 				+partnerItem(7)
 				+partnerItem(8)
 			+e.slider
-				.swiper-container.feedback-slider-js
+				.swiper-container.feedback-slider-js.border-draw.draw
 					.swiper-wrapper
 						+partnerSlide()
 						+partnerSlide(2)
@@ -72,7 +72,7 @@ mixin certificat(addClasses='', commonLazy=false)
 		+e.cert-txt Отзыв на бланке компании
 
 mixin partnerPill(number='')
-	+e.pill
+	+e.pill.border-draw.draw
 		+e.slide-cont
 			+e.slide-row.row
 				+e.port-col.col-auto

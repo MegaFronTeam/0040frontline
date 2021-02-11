@@ -452,15 +452,38 @@ function eventHandler() {
 
 		});
 	}
-	//.vac-head-js
-	//.vac-cont-js
+	//
+	$('.all-btn-js').click(function (){
+		$('.all-pp--js').toggleClass('active');
+		$('body').toggleClass('fixed2');
+	});
+	$('.close-all-pp-js').click(function (){
+		$('.all-pp--js').removeClass('active');
+		$('body').removeClass('fixed2');
+	});
+
+
+	window.addEventListener('resize', function (){
+		if (window.matchMedia("(min-width: 1200px)").matches) {
+			$('.all-pp--js').removeClass('active');
+			$('body').removeClass('fixed2');
+		}
+	}, {passive: true});
+
+	//custom select
+	$('.custom-select-js').select2({
+		minimumResultsForSearch: Infinity,
+	});
+
+
+
 
 	//end luckyone Js
 
 	//todo
-	// 1 select2
+	// 1 select2 ++
 	// 2 customers desires
-	// 3 fix menu 1920 +
+	// 3 fix menu 1920 ++
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

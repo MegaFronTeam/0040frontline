@@ -12,6 +12,54 @@ mixin mob-mnu()
 				+e.calc-btn(href='#') Рассчитать стоимость
 	//  мобильное меню
 
+mixin allServPopUp()
+	+b.all-pp--js
+		+e.inner
+			+e.mob-close.d-xl-none.text-end.mb-1
+				+e.close-btn.close-all-pp-js
+					+icon('cross')
+			+e.row.row
+				+allServPP('Готовые решения')
+					+e.LI.item: a(href="#") Для банков и финансового сектора
+					+e.LI.item: a(href="#") Для логистики
+					+e.LI.item: a(href="#") Для населения
+					+e.LI.item: a(href="#") Для госструктур
+					+e.LI.item: a(href="#") Для страховых компаний
+					+e.LI.item: a(href="#") Для ритейла
+				+allServPP('Входящие звонки ')
+					+e.LI.item: a(href="#") Виртуальный офис и ресепшн
+					+e.LI.item: a(href="#") Клиентский сервис и поддержка
+					+e.LI.item: a(href="#") Горячая линия
+					+e.LI.item: a(href="#") Прием жалоб и предложений
+					+e.LI.item: a(href="#") Прием заказов
+					+e.LI.item: a(href="#") Техническая поддержка
+				+allServPP('Искусственный интеллект ')
+					+e.LI.item: a(href="#") Создание и поддержка чат-ботов
+					+e.LI.item: a(href="#") Голосовой помощник
+					+e.LI.item: a(href="#") Распознавание речи
+					+e.LI.item: a(href="#") База знаний
+					+e.LI.item: a(href="#") Оценка качества работы
+					+e.LI.item: a(href="#") Повышение лояльности клиентов
+					+e.LI.item: a(href="#") Приглашения на мероприятия
+					+e.LI.item: a(href="#") Телемаркетинг
+				+allServPP('Другие услуги')
+					+e.LI.item: a(href="#") Номер 8 800
+					+e.LI.item: a(href="#") Аренда рабочего места
+					+e.LI.item: a(href="#") Обработка данных заказчика
+					+e.LI.item: a(href="#") SMS-рассылка
+					+e.LI.item: a(href="#") Консалтинг в области C all-центров
+					+e.LI.item: a(href="#") Почтовая рассылка
+					+e.LI.item: a(href="#") Аренда оператора
+				+allServPP('Исходящие звонки')
+					+e.LI.item: a(href="#") Актуализация базы данных
+					+e.LI.item: a(href="#") Информирование клиентов
+					+e.LI.item: a(href="#") Коллекторские услуги
+					+e.LI.item: a(href="#") Конкурентная разведка
+					+e.LI.item: a(href="#") Лидогенерация
+					+e.LI.item: a(href="#") Назначение встреч
+					+e.LI.item: a(href="#") Проведение опросов
+				//-+allServPP()
+
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
@@ -28,11 +76,13 @@ mixin top-nav()
 						img(loading="lazy" src="img/svg/center-word.svg" alt="")
 						img.d-none.d-lg-block(loading="lazy" src="img/svg/go-contact-txt.svg" alt="")
 			+e.bot-row.row
-				+e.all-col.col-auto.col-lg
-					+e.all-btn
-						+e.all-burg.d-none.d-lg-flex
-							+icon('burger-all')
-						+e.all-txt Все услуги
+				+e.all-col.col
+					+e.all-btn-cont
+						+e.all-btn.all-btn-js
+							+e.all-burg.d-none.d-lg-flex
+								+icon('burger-all')
+							+e.all-txt Все услуги
+						+allServPopUp()
 				+e.tell-col.col-auto.text-sm-end
 					+e.tell(href='tel:+74957893859') +7 495 789 38 59
 					+e.order-call(href='#') Заказать звонок
@@ -43,7 +93,13 @@ mixin top-nav()
 							+icon('zoom')
 				.col-auto.d-none.d-md-block
 					+e.calc-btn(href='#') Рассчитать стоимость
-				.col.d-lg-none.order-last
+				.col-auto.d-lg-none.order-last
 					+e.mob-burger.ms-auto(class="toggle-menu-mobile--js")
 						+icon('burger-all')
 	// end top-nav
+
+mixin allServPP(title, addClasses='col-6')
+	+e.col.col-lg-4(class=addClasses)
+		+e.title=title
+		+e.UL.list
+			block

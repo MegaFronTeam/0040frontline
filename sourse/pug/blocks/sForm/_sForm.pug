@@ -12,11 +12,7 @@ mixin sForm()
 					+form-wrap
 						+e.row.row
 							+e.select-col.col-12.col-md-auto
-								select.form-control.form-select
-									option(value="" disabled selected class="d-none") Выберите услуги
-									option услуга 1
-									option услуга 2
-									option услуга 3
+								+customSlect('service', undefined, 'Выберите услуги')
 							.col-12.col-md-auto
 								+input('Введите телефон', 'tel')
 							.col-12.col-md-auto
@@ -25,3 +21,10 @@ mixin sForm()
 					+e.man
 						img(loading="lazy" src="img/@2x/man-img.png" alt="")
 	// end sForm
+
+mixin customSlect(selectName, optionsArr=['услуга 1', 'очень очень долгая услуга услуга 2', 'очень долгая услуга'], placeholder='', keyClass='custom-select-js')
+	+b.custom-select
+		select(name=selectName data-placeholder=placeholder class=keyClass)
+			option(value="" label='#')
+			- for (let item of optionsArr)
+				option(value=item)=item

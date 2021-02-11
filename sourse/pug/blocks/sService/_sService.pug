@@ -15,7 +15,7 @@ mixin sService(data)
 					'Для госструктур',
 					'Для страховых компаний',
 					'Для ритейла',
-				])(class="top-item")
+				])(class="border-draw draw")
 					| Готовые
 					br
 					| решения
@@ -27,7 +27,7 @@ mixin sService(data)
 					'Прием жалоб и предложений',
 					'Прием заказов',
 					'Техническая поддержка',
-				])(class="top-item")
+				])(class="border-draw draw")
 					| Входящие
 					br
 					| звонки
@@ -40,7 +40,7 @@ mixin sService(data)
 					'Консалтинг в области C all-центров',
 					'Почтовая рассылка',
 					'Аренда оператора',
-				])(class="lower-item")
+				])(class="border-draw draw")
 					| Другие
 					br
 					| услуги
@@ -50,7 +50,7 @@ mixin sService(data)
 					'Голосовой помощник',
 					'Распознавание речи',
 					'База знаний',
-				])(class="lower-item")
+				])(class="border-draw draw")
 					| Искусственный
 					br
 					| интеллект
@@ -67,11 +67,12 @@ mixin sService(data)
 					'Повышение лояльности клиентов',
 					'Приглашения на мероприятия',
 					'Телемаркетинг',
-				])
+				])(class="border-draw draw")
 					| Исходящие
 					br
 					| звонки
 	// end sService
+	//-.border-draw.draw
 
 mixin sServiceItem(links)
 	+e.g-col
