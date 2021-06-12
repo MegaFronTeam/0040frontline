@@ -1,13 +1,18 @@
 $default-font: 'Montserrat';
 // $file-form: ($file-formats: woff2 woff ttf);
 $addr: '../fonts/';
-$file-format: woff2 woff;
+$file-format: woff2 ;
 
 //font-family: 'Montserrat', sans-serif;
 // If font from googlefont, next lines remove
 
 // font-weight helper:
-
+@include font-face ($default-font, $addr + "Montserrat-Regular", $file-formats: $file-format);
+@include font-face ($default-font, $addr + "Montserrat-Bold", bold, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "Montserrat-ExtraBold", 800, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "Montserrat-Light", 300, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "Montserrat-Medium", 500, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "Montserrat-SemiBold", 600, $file-formats: $file-format);
 // 100 Thin
 // 200 Extra Light
 // 300 Light
